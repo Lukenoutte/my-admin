@@ -17,7 +17,7 @@
           </q-toolbar-title>
 
           <q-input v-if="$q.screen.gt.sm"
-          class="q-ml-sm" :input-style="{ color: 'black', fontSize: '14px' }"
+          class="q-ml-sm" :input-style="{ color: 'black', fontSize: '14px', width: '300px' }"
           standout bg-color="white" dense rounded placeholder="Pesquisar...">
             <template v-slot:append>
               <q-btn round dense flat icon="search" color="primary" />

@@ -10,7 +10,7 @@
       padding
       arrows
       height="300px"
-      class="text-primary rounded-borders shadow-1"
+      class="text-primary rounded-borders shadow-2"
     >
       <q-carousel-slide name="style" class="column no-wrap flex-center">
         <q-icon name="style" size="56px" />
