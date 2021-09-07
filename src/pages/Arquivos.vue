@@ -1,6 +1,13 @@
 <template>
   <q-page>
-  <div class="q-pa-md">
+  <div class="flex flex-center q-mb-lg">
+    <q-btn-group push class="text-primary bg-white">
+      <q-btn push label="Arquivos Primários" icon="timeline" />
+      <q-btn push label="Auditar" icon="visibility" />
+      <q-btn push label="Atualizar" icon="update" />
+    </q-btn-group>
+  </div>
+  <q-card class="q-pa-xl">
     <div class="row">
       <q-input bottom-slots outlined class="col-md-4"
       bg-color="white" dense rounded standout placeholder="Pesquisar..."
@@ -102,14 +109,19 @@
         </tr>
       </tbody>
     </q-markup-table>
-  </div>
+  </q-card>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: 'PageIndex'
+  name: 'PageIndex',
+  setup () {
+    return {
+      tab: ref('one')
+    }
+  }
 })
 </script>

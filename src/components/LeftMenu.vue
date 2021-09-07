@@ -5,18 +5,20 @@
       <q-item
         clickable
         v-ripple
+        to="/"
         :active="link === 'inbox'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
-          <q-icon name="inbox" />
+          <q-icon name="home" />
         </q-item-section>
 
-        <q-item-section>Inbox</q-item-section>
+        <q-item-section>Início</q-item-section>
       </q-item>
 
       <q-item
         clickable
+        to="/arquivos"
         v-ripple
         :active="link === 'outbox'"
         active-class="my-menu-link"
@@ -25,7 +27,7 @@
           <q-icon name="send" />
         </q-item-section>
 
-        <q-item-section>Outbox</q-item-section>
+        <q-item-section>Arquivos</q-item-section>
       </q-item>
 
       <q-item
@@ -77,7 +79,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'EssentialLink',
+  name: 'LeftMenu',
   props: {
     title: {
       type: String,

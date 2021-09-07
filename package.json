@@ -2,7 +2,7 @@
   "name": "quasar-app",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "NCM Helper",
+  "productName": "myADMIN",
   "author": "Lucas Lima <lucas.alima@souunit.com.br>",
   "private": true,
   "scripts": {

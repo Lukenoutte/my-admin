@@ -137,8 +137,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `NCM Helper`,
-        short_name: `NCM Helper`,
+        name: `myADMIN`,
+        short_name: `myADMIN`,
         description: `A Quasar Framework app`,
         display: 'standalone',
         orientation: 'portrait',

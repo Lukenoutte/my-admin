@@ -18,7 +18,7 @@
 
           <q-input v-if="$q.screen.gt.sm"
           class="q-ml-sm" :input-style="{ color: 'black', fontSize: '14px' }"
-          standout bg-color="white" dense rounded placeholder="Pesquisar empresa...">
+          standout bg-color="white" dense rounded placeholder="Pesquisar...">
             <template v-slot:append>
               <q-btn round dense flat icon="search" color="primary" />
             </template>
@@ -27,7 +27,7 @@
         <div class="row items-center">
           <div class="q-mr-md">
             <q-btn color="white" class="q-mr-sm" dense push>
-              <q-badge floating color="negative" rounded />
+              <q-badge floating color="negative" rounded> 1 </q-badge>
               <q-avatar size="27px" icon="notifications_none" text-color="primary"/>
               <q-menu
                 :offset="[100, 15]"
@@ -81,7 +81,7 @@
       show-if-above
       bordered
       :width="200"
-      class="bg-grey-1"
+      class="bg-grey-2"
     >
       <q-list>
         <q-item-label
@@ -93,7 +93,7 @@
           </q-chip>
         </q-item-label>
 
-        <EssentialLink
+        <LeftMenu
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
@@ -102,20 +102,15 @@
     </q-drawer>
 
     <q-page-container>
-      <div class="flex flex-center q-mt-xl">
-        <q-btn-group push class="text-primary">
-          <q-btn push label="First" icon="timeline" />
-          <q-btn push label="Second" icon="visibility" />
-          <q-btn push label="Third" icon="update" />
-        </q-btn-group>
-        <router-view class="q-pt-xl" style="width: 80%;" />
+      <div class="flex flex-center bg-grey-1">
+        <router-view class="q-pt-xl" style="width: 90%;" />
       </div>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
+import LeftMenu from 'src/components/LeftMenu.vue'
 import { useQuasar } from 'quasar'
 const linksList = [
   {
@@ -131,7 +126,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    LeftMenu
   },
 
   setup () {
